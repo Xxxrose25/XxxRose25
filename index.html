@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>讯易馆</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>讯易馆</h1>
+        
+        <div class="form-section">
+            <h2>新增便签</h2>
+            <form id="noteForm">
+                <div class="form-group">
+                    <label for="patientName">病人姓名:</label>
+                    <input type="text" id="patientName" required>
+                </div>
+                <div class="form-group">
+                    <label for="prescription">方剂:</label>
+                    <textarea id="prescription" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="diagnosis">病名:</label>
+                    <input type="text" id="diagnosis" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">日期:</label>
+                    <input type="date" id="date" required>
+                </div>
+                <button type="submit">保存便签</button>
+            </form>
+        </div>
+        
+        <div class="search-section">
+            <h2>查询便签</h2>
+            <div class="search-options">
+                <input type="radio" id="searchByName" name="searchType" value="name" checked>
+                <label for="searchByName">按姓名</label>
+                <input type="radio" id="searchByDiagnosis" name="searchType" value="diagnosis">
+                <label for="searchByDiagnosis">按病名</label>
+            </div>
+            <div class="search-input">
+                <input type="text" id="searchTerm" placeholder="输入查询内容">
+                <button id="searchBtn">查询</button>
+                <button id="showAllBtn">显示全部</button>
+            </div>
+        </div>
+        
+        <div class="notes-section">
+            <h2>便签列表</h2>
+            <div id="notesList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
